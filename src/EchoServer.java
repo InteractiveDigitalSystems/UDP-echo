@@ -28,6 +28,7 @@ public class EchoServer extends Thread {
         running = true;
 
         while (running) {
+            buf = new byte[256];
             DatagramPacket packet
                     = new DatagramPacket(buf, buf.length);
             try {
